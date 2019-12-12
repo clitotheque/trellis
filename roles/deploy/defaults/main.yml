@@ -41,6 +41,9 @@ project_shared_children:
 project_environment:
   WP_ENV: "{{ env }}"
 
+# Files or folders to remove from the source when deploying
+project_unwanted_items: ['.git']
+
 # The project_current_path is the symlink used for the latest or active deployment
 # - default is 'current'
 project_current_path: "{{ project.current_path | default('current') }}"
